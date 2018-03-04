@@ -1,0 +1,112 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+h1, p{
+  text-align: center;
+}
+
+div.hotspot {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+
+}
+
+div.hotspot img {
+  width: 100%;
+
+}
+
+div.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 200%;
+  left: 0;
+  padding: 1em;
+  background-color: rgba(0,0,0,0.65);
+  transition: top 0.5s ease-in-out;
+  }
+
+  div.modal.active{
+    top: 0;
+    }
+
+  div.modal div.inner{
+    height:100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1em;
+  }
+
+  .spot {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000000;
+
+  }
+
+  #girlone {
+    top: 61%;
+    right: 50%;
+    background-color: #ff006870;
+  }
+
+  #girltwo {
+    top: 53%;
+    left: 68%;
+    background-color: #b753f382;
+}
+
+  #boyleft{
+    top: 36%;
+    right: 71%;
+    background-color: #0073ef91;
+}
+
+  #girlback{
+    top: 41%;
+    right: 62%;
+    background-color: #aff99782;
+
+}
+
+  #ambulance{
+    top: 13%;
+    right: 41%;
+    background-color: #fd4444b5;
+  }
+
+  /* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+}
